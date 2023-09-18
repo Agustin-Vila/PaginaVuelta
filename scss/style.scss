@@ -1,14 +1,17 @@
+@import "variables.scss";
+@import "fuentes.scss";
+
 *{
     margin: 0;
     padding: 0;
 }
 
   header{
-    background-color: #204ebc;
+    background-color: $color-principal;
     display: flex;
     align-items: center;
     height: 80px;
-    width: 100%;
+    width: $ancho;
     margin-bottom: 5px;
   }
   
@@ -18,7 +21,7 @@
   }
   
   h1 {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
   }
@@ -32,14 +35,21 @@
   }
 
   .imgprincipal{
-    width: 100%;
+    $imagen: "principal";
+    @if ($imagen== "principal") {
+        background-image: url(../images/principal.jpg);
+    }@else if ($imagen== "secundaria") {
+        background-image: url(../images/descarga.jpeg);
+    }
+
+    width: $ancho;
     height: 700px;
   }
 
   footer {
-    background-color: #204ebc;
-    color: #204ebc;
-    width: 100%;
+    background-color: $color-principal;
+    color: $color-principal;
+    width: $ancho;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -55,15 +65,15 @@
     padding: 0;
     display: flex; 
     justify-content: center;
+
+    lista-horizontal a {
+        color: $color-principal;
+        text-decoration: none;
+      }
   }
-  
+
   .lista-horizontal li {
     margin: 0 150px;
-  }
-  
-  .lista-horizontal a {
-    color: #204ebc;
-    text-decoration: none;
   }
 
   .imgredes{
@@ -76,7 +86,7 @@
   .titulo{
     margin: 10px;
     padding: 0;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
@@ -86,7 +96,7 @@
   .sponsors{
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
@@ -95,20 +105,20 @@
   .ganadores, .sponsors, .subtitulo, .palmares, .palmares1{
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
-    font-size: 26px;
+    font-size: $font-parrafo;
   }
 
   .subtitulo, .ganadores, .sponsors{
-    font-size: 40px;
+    font-size: $font-titulo;
     margin-bottom: 20px;
   }
 
   .parrafo1{
-    font-size: 20px;
+    font-size: $font-parrafo;
     margin-bottom: 20px;
     margin: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -127,14 +137,8 @@
   }
 
   .ganadoresimg{
-    width: 100%;
+    width: $ancho;
     height: 360px;
-  }
-
-  .shimano, .rudy, .banco, .toyota, .veladero, .specialized{
-    width: 400px;
-    height: 200px;
-    padding: 10px;
   }
 
   .grid5{
@@ -146,31 +150,12 @@
     grid-template-areas: 
     "shimano rudy banco"
     "toyota veladero specialized";
-  }
 
-  .equipos{
-    font-size: 40px;
-    width: 100%;
-    height: auto; 
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-    grid-area: equipos;
-  }
-
-  .titequipos1, .titequipos2, .titequipos3, .titequipos4{
-    font-size: 35px;
-  }
-
-  .nomequipos1, .nomequipos2, .nomequipos3, .nomequipos4{
-    font-size: 20px;
-  }
-
-
-
-  .imgequipos1, .imgequipos2, .imgequipos3, .imgequipos4{
-    width: 200px;
-    height: 200px;
+    .shimano, .rudy, .banco, .toyota, .veladero, .specialized{
+        width: 300px;
+        height: 150px;
+        padding: 30px;
+      }
   }
 
   .imgpalm, .imgpalm2{
@@ -187,11 +172,11 @@
   }
 
   .palmares, .palmares1{
-    font-size: 30px;
+    font-size: $font-titulo;
   }
 
 .textohistoria, .textohistoria1, .textohistoria2{
-  font-size: 20px;
+  font-size: $font-parrafo;
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -208,6 +193,41 @@
 
 .historia{
   margin: 10px;
+
+  .inicio{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 
+    "inicio1 inicio1 inicio1"
+    "hist1 inicio2 inicio2"
+    "hist1 inicio3 inicio3"
+    "inicio4 inicio4 inicio4";
+  }
+
+  .uci{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 
+    "imguci uci1 uci1"
+    "uci2 uci2 imguci1";
+  }
+
+  .primerauci{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+    "imgprimerauci primerauci1"
+    "imgprimerauci primerauci2";
+  }
+
+  .grid2{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto1 texto1"
+    "texto2 pacheco";
+  }
 }
 
 .grid{
@@ -224,6 +244,29 @@
   "nom3 img3"
   "equipo4 img4"
   "nom4 img4";
+
+  .equipos{
+    font-size: $font-titulo;
+    width: $ancho;
+    height: auto; 
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    grid-area: equipos;
+  }
+
+  .titequipos1, .titequipos2, .titequipos3, .titequipos4{
+    font-size: 35px;
+  }
+
+  .nomequipos1, .nomequipos2, .nomequipos3, .nomequipos4{
+    font-size: $font-parrafo;
+  }
+
+  .imgequipos1, .imgequipos2, .imgequipos3, .imgequipos4{
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .titequipos1{
@@ -303,16 +346,6 @@
   grid-area: hist1;
 }
 
-.inicio{
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas: 
-  "inicio1 inicio1 inicio1"
-  "hist1 inicio2 inicio2"
-  "hist1 inicio3 inicio3"
-  "inicio4 inicio4 inicio4";
-}
-
 .uci1{
   grid-area: uci1;
 }
@@ -329,14 +362,6 @@
   grid-area: imguci1;
 }
 
-.uci{
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas: 
-  "imguci uci1 uci1"
-  "uci2 uci2 imguci1";
-}
-
 .primerauci1{
   grid-area: primerauci1;
 }
@@ -347,23 +372,6 @@
 
 .imgprimerauci{
   grid-area: imgprimerauci;
-}
-
-.primerauci{
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas:
-  "imgprimerauci primerauci1"
-  "imgprimerauci primerauci2";
-}
-
-.grid2{
-  display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-areas: 
-  "titulo titulo"
-  "texto1 texto1"
-  "texto2 pacheco";
 }
 
 .grid3{
@@ -407,37 +415,37 @@
 }
 
 .nomequipos1, .nomequipos2, .nomequipos3, .nomequipos4, .inicio1, .inicio2, .inicio3, .inicio4, .textohistoria1, .textohistoria2, .palma1, .años1, .palma2, .cantidad, .uci1, .uci2 ,.primerauci1, .primerauci2{
-  font-family: 'Montserrat', sans-serif;
+  font-family: $fuente-parrafo;
 }
 
 .btn-custom{
-  background-color: #204ebc;
+  background-color: $color-principal;
 }
 
 .ganadores, .sponsors, .subtitulo, .equipos, .titequipos1, .titequipos2, .titequipos3, .titequipos4, .palmares, .palmares1{
-  font-family: 'Playfair Display', serif;
+  font-family: $fuente-titulos;
 }
 
 @media(max-width: 767px){
   .titulo{
     margin: 20px;
     padding: 0;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
     font-family: 'Playfair Display', serif;
   }
   header{
-    background-color: #204ebc;
+    background-color: $color-principal;
     display: center;
     align-items: center;
     height: 80px;
-    width: 100%;
+    width: $ancho;
     margin-bottom: 5px;
   }
   .imgprincipal{
-    width: 100%;
+    width: $ancho;
     height: 220px;
   }
   h1 {
@@ -446,9 +454,9 @@
     font-family: 'Poppins', sans-serif;
   }
   footer {
-    background-color: #204ebc;
-    color: #204ebc;
-    width: 100%;
+    background-color: $color-principal;
+    color: $color-principal;
+    width: $ancho;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -463,14 +471,16 @@
     padding: 0;
     display: flex; 
     justify-content: center;
+
+    .lista-horizontal li {
+        margin: 0 40px;
+      }
+      .lista-horizontal a {
+        color: $color-principal;
+        text-decoration: none;
+      }
   }
-  .lista-horizontal li {
-    margin: 0 40px;
-  }
-  .lista-horizontal a {
-    color: #204ebc;
-    text-decoration: none;
-  }
+ 
   .imgredes{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -485,19 +495,19 @@
   .ganadores, .sponsors, .subtitulo, .palmares, .palmares1{
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
     font-size: 26px;
   }
   .ganadoresimg{
-    width: 100%;
+    width: $ancho;
     height: 110px;
   }
   .equipos{
     font-size: 30px;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
@@ -579,11 +589,11 @@
 
 @media(min-width: 768px) and (max-width: 1023px){
   header{
-    background-color: #204ebc;
+    background-color: $color-principal;
     display: center;
     align-items: center;
     height: 80px;
-    width: 100%;
+    width: $ancho;
     margin-bottom: 5px;
   }
   h1 {
@@ -593,13 +603,13 @@
   }
 
   .imgprincipal{
-    width: 100%;
+    width: $ancho;
     height: 400px;
   }
   footer {
-    background-color: #204ebc;
-    color: #204ebc;
-    width: 100%;
+    background-color: $color-principal;
+    color: $color-principal;
+    width: $ancho;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -614,13 +624,14 @@
     padding: 0;
     display: flex; 
     justify-content: center;
-  }
-  .lista-horizontal li {
-    margin: 0 80px;
-  }
-  .lista-horizontal a {
-    color: #204ebc;
-    text-decoration: none;
+
+    .lista-horizontal li {
+        margin: 0 80px;
+      }
+      .lista-horizontal a {
+        color: $color-principal;
+        text-decoration: none;
+      }
   }
   .imgredes{
     margin-top: 10px;
@@ -634,12 +645,12 @@
     padding: 10px;
   }
   .ganadoresimg{
-    width: 100%;
+    width: $ancho;
     height: 200px;
   }
   .equipos{
     font-size: 40px;
-    width: 100%;
+    width: $ancho;
     height: auto; 
     display: block;
     text-align: center;
