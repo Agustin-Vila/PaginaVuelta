@@ -140,7 +140,8 @@ footer {
   margin-top: 20px;
   grid-template-areas: "shimano rudy banco" "toyota veladero specialized";
 }
-.grid5 .shimano, .grid5 .rudy, .grid5 .banco, .grid5 .toyota, .grid5 .veladero, .grid5 .specialized {
+
+.shimano, .rudy, .banco, .toyota, .veladero, .specialized {
   width: 300px;
   height: 150px;
   padding: 30px;
@@ -456,9 +457,9 @@ footer {
     margin-top: 5px;
     grid-template-areas: "shimano rudy banco" "toyota veladero specialized";
   }
-  .grid5 .shimano, .grid5 .rudy, .grid5 .banco, .grid5 .toyota, .grid5 .veladero, .grid5 .specialized {
-    width: 120px;
-    height: 80px;
+  .shimano, .rudy, .banco, .toyota, .veladero, .specialized {
+    width: 100px;
+    height: 70px;
     padding: 10px;
   }
   .ganadores, .sponsors, .subtitulo, .palmares, .palmares1 {
@@ -491,7 +492,7 @@ footer {
   }
   .imgequipos1, .imgequipos2, .imgequipos3, .imgequipos4 {
     width: 100px;
-    height: 120px;
+    height: 100px;
   }
   .palmares, .palmares1 {
     font-size: 25px;
@@ -536,12 +537,17 @@ footer {
     grid-template-areas: "imgprimerauci primerauci1" "primerauci2 primerauci2";
   }
   .pacheco {
-    width: 70px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "titulo titulo" "texto1 texto1" "texto2 pacheco";
   }
   .cont {
     margin: 20px;
