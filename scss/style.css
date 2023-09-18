@@ -182,22 +182,26 @@ footer {
 .historia {
   margin: 10px;
 }
-.historia .inicio {
+
+.inicio {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-areas: "inicio1 inicio1 inicio1" "hist1 inicio2 inicio2" "hist1 inicio3 inicio3" "inicio4 inicio4 inicio4";
 }
-.historia .uci {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-areas: "imguci uci1 uci1" "uci2 uci2 imguci1";
-}
-.historia .primerauci {
+
+.primerauci {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-areas: "imgprimerauci primerauci1" "imgprimerauci primerauci2";
 }
-.historia .grid2 {
+
+.uci {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "imguci uci1 uci1" "uci2 uci2 imguci1";
+}
+
+.grid2 {
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-areas: "titulo titulo" "texto1 texto1" "texto2 pacheco";
@@ -224,7 +228,8 @@ footer {
 .grid .nomequipos1, .grid .nomequipos2, .grid .nomequipos3, .grid .nomequipos4 {
   font-size: 20px;
 }
-.grid .imgequipos1, .grid .imgequipos2, .grid .imgequipos3, .grid .imgequipos4 {
+
+.imgequipos1, .imgequipos2, .imgequipos3, .imgequipos4 {
   width: 300px;
   height: 200px;
 }
@@ -430,12 +435,12 @@ footer {
     display: flex;
     justify-content: center;
   }
-  .lista-horizontal .lista-horizontal li {
-    margin: 0 40px;
-  }
   .lista-horizontal .lista-horizontal a {
     color: #204ebc;
     text-decoration: none;
+  }
+  .lista-horizontal li {
+    margin: 0 40px;
   }
   .imgredes {
     margin-top: 10px;
@@ -443,7 +448,15 @@ footer {
     width: 30px;
     height: 30px;
   }
-  .shimano, .rudy, .banco, .toyota, .veladero, .specialized {
+  .grid5 {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    grid-template-areas: "shimano rudy banco" "toyota veladero specialized";
+  }
+  .grid5 .shimano, .grid5 .rudy, .grid5 .banco, .grid5 .toyota, .grid5 .veladero, .grid5 .specialized {
     width: 120px;
     height: 80px;
     padding: 10px;
@@ -478,7 +491,7 @@ footer {
   }
   .imgequipos1, .imgequipos2, .imgequipos3, .imgequipos4 {
     width: 100px;
-    height: 100px;
+    height: 120px;
   }
   .palmares, .palmares1 {
     font-size: 25px;
@@ -571,12 +584,12 @@ footer {
     display: flex;
     justify-content: center;
   }
-  .lista-horizontal .lista-horizontal li {
-    margin: 0 80px;
-  }
   .lista-horizontal .lista-horizontal a {
     color: #204ebc;
     text-decoration: none;
+  }
+  .lista-horizontal li {
+    margin: 0 80px;
   }
   .imgredes {
     margin-top: 10px;
