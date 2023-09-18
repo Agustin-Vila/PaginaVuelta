@@ -35,12 +35,6 @@
   }
 
   .imgprincipal{
-    $imagen: "principal";
-    @if ($imagen== "principal") {
-        background-image: url(../images/principal.jpg);
-    }@else if ($imagen== "secundaria") {
-        background-image: url(../images/descarga.jpeg);
-    }
     width: $ancho;
     height: 700px;
   }
