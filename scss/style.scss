@@ -168,7 +168,7 @@
     font-size: $font-titulo;
   }
 
-.textohistoria, .textohistoria1, .textohistoria2{
+.textohistoria, .textohistoria1, .textohistoria2, .pachecotexto{
   font-size: $font-parrafo;
   margin-left: 30px;
   margin-right: 30px;
@@ -194,7 +194,9 @@
   grid-template-areas: 
   "inicio1 inicio1 inicio1"
   "hist1 inicio2 inicio2"
-  "hist1 inicio3 inicio3"
+  "hist1 inicio5 inicio5"
+  "hist1 inicio6 inicio6"
+  "inicio3 inicio3 inicio3"
   "inicio4 inicio4 inicio4";
 }
 
@@ -203,6 +205,7 @@
   grid-template-columns: 20% 80%;
   grid-template-areas:
   "imgprimerauci primerauci1"
+  "imgprimerauci primerauci3"
   "imgprimerauci primerauci2";
 }
 
@@ -211,7 +214,11 @@
   grid-template-columns: 20% 60% 20%;
   grid-template-areas: 
   "imguci uci1 uci1"
-  "uci2 uci2 imguci1";
+  "imguci uci3 uci3"
+  "imguci uci4 uci4"
+  "uci2 uci2 imguci1"
+  "uci5 uci5 imguci1"
+  "uci6 uci6 uci6";
   }
 
 .grid2{
@@ -220,7 +227,8 @@
   grid-template-areas: 
   "titulo titulo"
   "texto1 texto1"
-  "texto2 pacheco";
+  "texto2 pacheco"
+  "pachecotexto pacheco";
   }
 
 .grid{
@@ -327,6 +335,14 @@
   grid-area: inicio2;
 }
 
+.inicio5{
+  grid-area: inicio5;
+}
+
+.inicio6{
+  grid-area: inicio6;
+}
+
 .inicio3{
   grid-area: inicio3;
 }
@@ -343,8 +359,24 @@
   grid-area: uci1;
 }
 
+.uci3{
+  grid-area: uci3;
+}
+
+.uci4{
+  grid-area: uci4;
+}
+
 .uci2{
   grid-area: uci2;
+}
+
+.uci5{
+  grid-area: uci5;
+}
+
+.uci6{
+  grid-area: uci6;
 }
 
 .imguci{
@@ -361,6 +393,10 @@
 
 .primerauci2{
   grid-area: primerauci2;
+}
+
+.primerauci3{
+  grid-area: primerauci3;
 }
 
 .imgprimerauci{
@@ -399,6 +435,10 @@
   grid-area: texto2;
 }
 
+.pachecotexto{
+  grid-area: pachecotexto;
+}
+
 .pacheco{
   grid-area: pacheco;
 }
@@ -407,7 +447,7 @@
   margin: 20px;
 }
 
-.nomequipos1, .nomequipos2, .nomequipos3, .nomequipos4, .inicio1, .inicio2, .inicio3, .inicio4, .textohistoria1, .textohistoria2, .palma1, .años1, .palma2, .cantidad, .uci1, .uci2 ,.primerauci1, .primerauci2{
+.nomequipos1, .nomequipos2, .nomequipos3, .nomequipos4, .inicio1, .inicio2, .inicio3, .inicio4, .inicio5, .inicio6, .textohistoria1, .textohistoria2, .pachecotexto, .palma1, .años1, .palma2, .cantidad, .uci1, .uci2, .uci3, .uci4, .uci5, .uci6, .primerauci1, .primerauci3, .primerauci2{
   font-family: $fuente-parrafo;
 }
 
@@ -539,7 +579,7 @@
   .imgpalm2{
     margin-left: 190px;
   }
-  .textohistoria, .textohistoria1, .textohistoria2{
+  .textohistoria, .textohistoria1, .textohistoria2, .pachecotexto{
     font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;
@@ -554,29 +594,40 @@
     align-items: center;
   }
   .inicio{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 40% 20% 40%;
     grid-template-areas: 
     "inicio1 inicio1 inicio1"
     "hist1 inicio2 inicio2"
+    "inicio5 inicio5 inicio5"
+    "inicio6 inicio6 inicio6"
     "inicio3 inicio3 inicio3"
     "inicio4 inicio4 inicio4";
   }
   .uci{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 40% 20% 40%;
     grid-template-areas: 
     "imguci uci1 uci1"
-    "uci2 uci2 imguci1";
+    "uci3 uci3 uci3"
+    "uci4 uci4 uci4"
+    "uci2 uci2 imguci1"
+    "uci5 uci5 uci5"
+    "uci6 uci6 uci6";
   }
   .primerauci{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-areas:
     "imgprimerauci primerauci1"
+    "primerauci3 primerauci3"
     "primerauci2 primerauci2";
   }
   .pacheco{
+    margin-top: 20px;
     width: 110px;
     height: 110px;
     display: flex;
@@ -590,7 +641,8 @@
     grid-template-areas: 
     "titulo titulo"
     "texto1 texto1"
-    "texto2 pacheco";
+    "texto2 pacheco"
+    "pachecotexto pachecotexto";
     }
   .cont{
     margin: 20px;
@@ -690,14 +742,14 @@
   .imgpalm2{
     margin-left: 290px;
   }
-  .textohistoria, .textohistoria1, .textohistoria2{
+  .textohistoria, .textohistoria1, .textohistoria2, .pachecotexto{
     font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
   }
   .hist1, .imguci, .imguci1, .imgprimerauci{
-    width: 230px;
+    width: 210px;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -705,28 +757,50 @@
     align-items: center;
   }
   .inicio{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 30% 50% 20%;
     grid-template-areas: 
     "inicio1 inicio1 inicio1"
     "hist1 inicio2 inicio2"
+    "hist1 inicio5 inicio5"
+    "inicio6 inicio6 inicio6"
     "inicio3 inicio3 inicio3"
     "inicio4 inicio4 inicio4";
   }
   .uci{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-areas: 
     "imguci uci1 uci1"
-    "uci2 uci2 imguci1";
+    "imguci uci3 uci3"
+    "uci4 uci4 uci4"
+    "uci2 uci2 imguci1"
+    "uci5 uci5 imguci1"
+    "uci6 uci6 uci6";
   }
   .primerauci{
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-areas:
     "imgprimerauci primerauci1"
+    "imgprimerauci primerauci3"
     "primerauci2 primerauci2";
   }
+
+  .grid2{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto1 texto1"
+    "texto2 pacheco"
+    "pachecotexto pacheco";
+    }
+
   .pacheco{
     width: 150px;
     height: 150px;
